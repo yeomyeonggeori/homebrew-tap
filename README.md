@@ -4,10 +4,15 @@ Homebrew formulae for 여명거리's products.
 
 ```sh
 brew tap yeomyeonggeori/tap
+brew trust --formula yeomyeonggeori/tap/internkim
 brew install internkim
 ```
 
-On a Mac with Homebrew, the one line reaches the same place:
+The middle line is Homebrew 7's: it refuses to load a formula from a tap that
+is not its own until someone says to. `brew untrust --formula
+yeomyeonggeori/tap/internkim` takes it back.
+
+The one line does those three and reaches the same place:
 
 ```sh
 curl -fsSL https://intern.kim/install.sh | sh -s -- host
