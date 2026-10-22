@@ -7,20 +7,21 @@
 class Internkim < Formula
   desc "Run your company's agent, messenger and web app on this computer"
   homepage "https://intern.kim"
-  url "https://github.com/yeomyeonggeori/internkim/releases/download/v0.0.1/internkim-macos-arm64.tar.gz"
-  sha256 "c29e3483a9d39425e55bba1ee08b615cdb52d8c58507b958de17d8b7e6f657b1"
+  url "https://github.com/yeomyeonggeori/internkim/releases/download/v0.0.4/internkim-macos-arm64.tar.gz"
+  sha256 "2720bbeeb6920f73431059a1709515d3369360044863decbb84988f824027cc4"
   license "Apache-2.0"
-  version "0.0.1"
+  version "0.0.4"
   version_scheme 1
 
   bottle do
-    root_url "https://github.com/yeomyeonggeori/internkim/releases/download/v0.0.1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c465e8bca49f26793a84a1b582ed50162abfbf5a1339351648a8efabe8954185"
+    root_url "https://github.com/yeomyeonggeori/internkim/releases/download/v0.0.4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "729c849b2f273ffb67c7f3df33c91459896b6fce89cfd9b4bc3eaf0822c21933"
   end
 
   depends_on "postgresql@17"
   depends_on "redis"
   depends_on "git"
+  depends_on "ffmpeg"
   depends_on "openssl@3"
   depends_on "jq"
   depends_on "fontconfig"
